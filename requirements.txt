@@ -1,0 +1,4 @@
+instabot
+Pillow
+beautifulsoup4
+requests
