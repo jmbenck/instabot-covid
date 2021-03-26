@@ -2,11 +2,11 @@
 
 This bot searches for the number of deaths by COVD-19 in Brasil generate an image with black background, and the number written in white then upload it to an [Instagram Profile](https://www.instagram.com/covid19_mortes/).
 
->I really hope these numbers stop growing. I made this with the purpose to inform and sensitize the population about the chaotic state of the pandemic using a social media.
+I really hope these numbers stop growing. I made this with the purpose to inform and sensitize the population about the chaotic state of the pandemic using a social media.
 
 
 ![Insta post example](25-03-2021.jpeg)
-Insta post day 25/03/2021
+>Insta post day 25/03/2021
 
 
 ## Dependencies
