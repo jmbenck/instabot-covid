@@ -1,6 +1,6 @@
 # Instagram bot COVID19
 
-This bot searches for the number of deaths by COVD-19 in Brasil generate an image with black background, and the number written in white then upload it to an [Instagram Profile](https://www.instagram.com/covid19_mortes/).
+This bot searches for the number of deaths by COVD-19 in Brasil, generate an image with black background, and the number written in white then upload it to an [Instagram Profile](https://www.instagram.com/covid19_mortes/).
 
 I really hope these numbers stop growing. I made this with the purpose to inform and sensitize the population about the chaotic state of the pandemic using a social media.
 
