@@ -25,7 +25,6 @@ d.text(((1080-w)/2, (1080-h)/2), deaths, font=fnt, fill=(255, 255, 255))
 
 # Save Image with datetime name
 img.save(f'{datetime.datetime.now():%d-%m-%Y}.jpeg')
-img.save('newteste.jpeg')
 
 # Store the name of the image
 img_name = f'{datetime.datetime.now():%d-%m-%Y}.jpeg'
