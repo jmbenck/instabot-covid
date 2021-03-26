@@ -69,7 +69,7 @@ Analysing the [page](https://www.worldometers.info/coronavirus/country/brazil/) 
 So, we'll use this class name to search for the specific element that contains the deaths number using ``find_all()`` and ``find`` methods from BeautifulSoup and store it in the variable ``deaths``
 
 ````Python3
-deaths = s.find_all('div', {'class': 'maincounter-number'})
+deaths = s.find_all('div', {'class': "maincounter-number"})
 deaths = deaths[1].find('span').text
 ````
 ### Creating image
@@ -80,25 +80,29 @@ d = ImageDraw.Draw(img)
 ````
 Define the font that you want, and the size of the font
 ````Python3
-fnt = ImageFont.truetype('C:\Windows\Fonts\Arial.ttf', 200)
+# Windows Fonts Path
+fnt = ImageFont.truetype(r"/Windows/Fonts/Arial.ttf", 200)
+# Linux/MacOS Fonts Path
+fnt = ImageFont.truetype(r"/Library/Fonts/Arial.ttf", 200)
 ````
-Store the ``width`` and ``height`` of the text to centralize it in the background.
+Create the text and store the ``width`` and ``height`` of the text to centralize it in the background.
 ````Python3
 w, h = d.textsize(deaths, font=fnt)
 ````
-Calculate the center point by subtracting text size from the background size, set the value of the text with ``deaths`` variable. Define the ``font`` and Finally, set the text fill color to white with ``RGB COLOR CODE``.
+Calculate the center point by subtracting text size from the background size - in this case 1080px. Then, set the value of the text with ``deaths`` variable, set the ``font`` and Finally, set the text fill color to white with ``RGB COLOR CODE``.
 ````Python3
 d.text(((1080-w)/2, (1080-h)/2), deaths, font=fnt, fill=(255, 255, 255))
 ````
 Now that we generated image, we can save it with datetime name for identification
 ````Python3
-img.save(f'{datetime.datetime.now():%d-%m-%Y}.jpeg')
+img_name = "{:%d-%m-%Y}.jpeg"
+img_name = img_name.format(datetime.datetime.now())
+img.save(img_name)
 ````
 Finally, upload your image to Instagram
 
 ````Python3
-bot.upload_photo(f'{datetime.datetime.now():%d-%m-%Y}.jpeg', 
-                 caption='Insert Caption Here')
+bot.upload_photo(img_name, caption="Insert Caption Here")
 ````
 ## Contribute
 That's all. Feel free for collaborating with this repo. Thank you.
